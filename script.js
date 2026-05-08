@@ -13,7 +13,42 @@ const toggleBtn = document.querySelector("#toggle");
 
 //we can change attributes & properties using JS!!
 heading.textContent = "Light & Dark Website"; //JS wrote html code!
+//can do diffrent colors using rgb!
 heading.style.color = "#ed919a";
 body.style.background = "pink";
 description.style.color = "#ed919a";
+toggleBtn.style.color = "pink";
+toggleBtn.style.background = "#ed919a";
+
+//Define what happens when button is clicked
+function toggleMode(){
+    console.log("triggered the function");
+    //1.Flip the boolean variable to track the mode (now...darkMode = true)
+    darkMode = !darkMode;
+    console.log(darkMode);
+    //2.Conditionally apply styles depending on mode (IS IT TRUE?)
+    if (darkMode == true){
+        console.log("apply dark styles");
+        body.style.background = "black";
+        heading.style.color ="purple";
+        description.style.color ="purple";
+        toggleBtn.style.color ="purple";
+        toggleBtn.style.background ="rgb(166, 132, 189)";
+        description.textContent = "Welcome to the dark side";
+        toggleBtn.textContent = "Switch to light";
+    }
+    else{
+        console.log("apply light styles");
+        body.style.background = "pink";
+        heading.style.color = "#ed919a";
+        description.style.color = "#ed919a";
+        toggleBtn.style.color = "pink";
+        toggleBtn.style.background = "#ed919a";
+        description.textContent = "Welcome Back!";
+        toggleBtn.textContent = "Switch to dark";
+    }
+}
+
+// Attach function to the actual button
+toggleBtn.addEventListener("click", toggleMode);
 
