@@ -34,7 +34,7 @@ function toggleMode(){
         description.style.color ="purple";
         toggleBtn.style.color ="purple";
         toggleBtn.style.background ="rgb(166, 132, 189)";
-        description.textContent = "Welcome to the dark side";
+        description.textContent = "Welcome to the dark side 😈";
         toggleBtn.textContent = "Switch to light";
     }
     else{
@@ -44,7 +44,7 @@ function toggleMode(){
         description.style.color = "#ed919a";
         toggleBtn.style.color = "pink";
         toggleBtn.style.background = "#ed919a";
-        description.textContent = "Welcome Back!";
+        description.textContent = "Welcome Back! 😇";
         toggleBtn.textContent = "Switch to dark";
     }
 }
@@ -52,3 +52,17 @@ function toggleMode(){
 // Attach function to the actual button
 toggleBtn.addEventListener("click", toggleMode);
 
+
+//REVIEW: makung button interactive
+const image = document.querySelector("#image");
+const hackerBtn = document.querySelector("#hacker");
+//2. Attach a finction to the button 
+hackerBtn.addEventListener("click", setHacker);
+//3.Define the function
+function setHacker(){
+    body.style.background = "black";
+    body.style.fontFamily = "monospace";
+    description.style.color = rgb(0, 186, 28);
+    description.textContent = "YOU HAVE BEEN HACKED";
+    image.src = "hacked.jpg";
+}
