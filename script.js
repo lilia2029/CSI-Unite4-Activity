@@ -53,7 +53,7 @@ function toggleMode(){
 toggleBtn.addEventListener("click", toggleMode);
 
 
-//REVIEW: makung button interactive
+//REVIEW: making button interactive
 const image = document.querySelector("#image");
 const hackerBtn = document.querySelector("#hacker");
 //2. Attach a finction to the button 
@@ -63,6 +63,7 @@ function setHacker(){
     body.style.background = "black";
     body.style.fontFamily = "monospace";
     description.style.color = rgb(0, 186, 28);
-    description.textContent = "YOU HAVE BEEN HACKED";
+    toggleBtn.style.background = rgb(0, 186, 28);
+    description.textContent = "YOU HAVE BEEN HACKED 🐱‍💻";
     image.src = "hacked.jpg";
 }
