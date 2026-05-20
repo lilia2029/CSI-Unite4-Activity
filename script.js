@@ -51,6 +51,7 @@ function toggleMode(){
     }
 }
 
+
 // Attach function to the actual button
 toggleBtn.addEventListener("click", toggleMode);
 
@@ -72,14 +73,34 @@ function setHacker(){
     description.textContent = "YOU HAVE BEEN HACKED 🐱‍💻";
     image.src = "hacked.jpg";
     hackerBtn.style.background = "black";
-    hackerBtn.style.color = "white";
-    
+    hackerBtn.style.color = "white";  
 }
 
 //Another Mode!
 const gameBtn = document.querySelector("#playGame");
 gameBtn.addEventListener("click", playGame);
+const emoji = document.querySelector("#emoji");
+let games = false;
+gameBtn.style.background = "white";
+        gameBtn.style.color ="purple";
+        gameBtn.style.borderColor = "purple";
 function playGame() {
     console.log("games!!");
-    
+    emoji.classList.add("animated");
+    games = !games;
+    if (games == true){
+        console.log("apply changes");
+        body.style.background ="purple";
+        gameBtn.style.background = "rgb(184, 4, 220)";
+        gameBtn.style.color ="white"; 
+        description.style.color = "white";
+        heading.style.color ="white";
+
+    }
+    else{
+        console.log("go back!");
+        gameBtn.style.background = "white";
+        gameBtn.style.color ="purple";
+        gameBtn.style.borderColor = "purple";
+    }
 }
