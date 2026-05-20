@@ -95,6 +95,7 @@ function playGame() {
         gameBtn.style.color ="white"; 
         description.style.color = "white";
         heading.style.color ="white";
+        image.src = "https://i.pinimg.com/originals/52/e4/2e/52e42e59adf538ea2ea2ae1774a47c9b.gif";
 
     }
     else{
@@ -102,5 +103,11 @@ function playGame() {
         gameBtn.style.background = "white";
         gameBtn.style.color ="purple";
         gameBtn.style.borderColor = "purple";
+        image.src = "ballet.jpg";
+         heading.style.color = "#ed919a";
+        description.style.color = "#ed919a";
+         body.style.background = "pink";
+        heading.style.color = "#ed919a";
+
     }
 }
